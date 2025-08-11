@@ -24,7 +24,7 @@ const CoreValues = () => {
       img: peopleFirstImg,
     },
     {
-      title: "Commitment",
+      title: "Community",
       text: "We believe in building strong, meaningful networks where ideas, support, and opportunities can thrive.",
       img: communityImg,
     },
@@ -34,8 +34,8 @@ const CoreValues = () => {
       img: growthImg,
     },
     {
-      title: "Values",
-      text: "Our core values guide our mission, culture, and long-term success.",
+      title: "Ownership",
+      text: " We take responsibility for our actions, our results, and the trust our clients place in us, ensuring every commitment is followed through.",
       img: communityImg, // Change if you have a specific image
     },
   ];

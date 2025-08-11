@@ -10,19 +10,20 @@ function ContactSection() {
 
     emailjs
       .sendForm(
-        "service_t9kofxa", // from EmailJS
-        "template_s44q82g", // from EmailJS
+        "service_e5u8std", // EmailJS service ID
+        "template_s44q82g", // EmailJS template ID
         form.current,
-        "4Fn-5kF6fUm0txNmA" // from EmailJS
+        "4Fn-5kF6fUm0txNmA" // EmailJS public key
       )
       .then(
         (result) => {
+          console.log(result.text);
           alert("Message sent successfully!");
           form.current.reset();
         },
         (error) => {
-          alert("Failed to send message, please try again.");
-          console.error(error);
+          console.error(error.text);
+          alert("Failed to send message. Please try again.");
         }
       );
   };
@@ -63,7 +64,7 @@ function ContactSection() {
                 <label className="block font-medium text-gray-800">Name</label>
                 <input
                   type="text"
-                  name="name"
+                  name="from_name"
                   placeholder="Enter your Name"
                   required
                   className="w-full mt-2 p-3 bg-gray-100 border border-gray-300 rounded-md focus:outline-none text-black placeholder-gray-500"
@@ -75,7 +76,7 @@ function ContactSection() {
                 <label className="block font-medium text-gray-800">Email</label>
                 <input
                   type="email"
-                  name="email"
+                  name="reply_to"
                   placeholder="Enter your email"
                   required
                   className="w-full mt-2 p-3 bg-gray-100 border border-gray-300 rounded-md focus:outline-none text-black placeholder-gray-500"

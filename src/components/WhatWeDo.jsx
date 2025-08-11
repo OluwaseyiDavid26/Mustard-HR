@@ -12,19 +12,19 @@ function WhatWeDo() {
       image: job,
       title: "Talent Acquisition",
       description:
-        "We connect the right people to the right opportunities. From interns and recent graduates to experienced professionals, we match talent with organizations where they can thrive.",
+        "Hiring well is one of the most critical investments a business can make. We help employers recruit with intention, not as a last-minute scramble but as a strategic decision. Every candidate is vetted for skills, culture fit, and growth potential.",
     },
     {
       image: carreer,
       title: "Career Development",
       description:
-        "We work directly with individuals to sharpen their personal brands, strengthen their CVs and LinkedIn profiles, and develop strong interview techniques that build real confidence.",
+        "Your career deserves more than a lucky break. We provide CV upgrades, interview prep, and career coaching, giving job seekers the tools and positioning they need to stand out and secure the right roles.",
     },
     {
       image: advisory,
       title: "HR Advisory",
       description:
-        "We help organizations build robust HR infrastructures, improve leadership capability, design performance management frameworks, and cultivate workplace cultures that attract and retain top talent.",
+        "We partner with organizations to create the structure, systems, and culture they need to grow responsibly. From compliance to culture building, our guidance is clear, practical, and built for lasting impact.",
     },
   ];
 

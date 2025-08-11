@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { HiMenu, HiX } from "react-icons/hi";
@@ -30,7 +29,7 @@ export default function Navbar() {
         </ScrollLink>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex items-center space-x-6">
           {navLinks.map((link, index) => {
             const isContact = link.name === "CONTACT US";
             return (
@@ -40,11 +39,11 @@ export default function Navbar() {
                 smooth={true}
                 duration={500}
                 offset={-70}
-                className={`font-medium px-4 py-2 rounded-md transition-all duration-200 cursor-pointer
+                className={`font-medium px-4 py-2 rounded-md transition-all duration-200 cursor-pointer flex items-center
                   ${
                     isContact
-                      ? "border border-[#eab308] text-[#eab308] hover:bg-[#eab308] hover:text-white"
-                      : "text-black hover:bg-[#eab308] hover:text-white"
+                      ? "bg-[#eab308] text-white hover:bg-[#d4a106]"
+                      : "text-black hover:underline underline-offset-4"
                   }`}
               >
                 {link.name}
@@ -78,8 +77,8 @@ export default function Navbar() {
                   className={`font-medium px-4 py-2 rounded-md transition-all cursor-pointer
                     ${
                       isContact
-                        ? "border border-[#eab308] text-[#eab308] hover:bg-[#eab308] hover:text-white"
-                        : "text-gray-900 hover:bg-[#eab308] hover:text-white"
+                        ? "bg-[#eab308] text-white hover:bg-[#d4a106]"
+                        : "text-black hover:underline underline-offset-4"
                     }`}
                   onClick={() => setIsOpen(false)}
                 >

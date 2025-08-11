@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-// import folajomi from "../assets/folajomi.jpg";
 import img1 from "../assets/img1.png";
 import img2 from "../assets/img2.png";
 import img3 from "../assets/img3.png";
@@ -8,19 +7,19 @@ import img3 from "../assets/img3.png";
 function Testimonial() {
   const testimonials = [
     {
-      name: "Aisha Bello",
+      name: "Business Manager <br/> Gasify",
       image: img1,
-      text: "Serene made it so easy to get spa services at home. I love the convenience and professional quality!",
+      text: "Mustard HR helped us scale our operation with the right people. Their understanding of our industry and the quality of candidates they brought in saved us weeks of recruitment time and ensured we could focus on growing Gasify",
     },
     {
-      name: "David Eze",
+      name: "Program Manager <br/> The Hive Incubator",
       image: img2,
-      text: "Fast booking, great professionals, and amazing results. Highly recommended for anyone needing wellness care!",
+      text: "Working with Mustard HR has been a game changer for our startups. They do more than just find candidates, they help us build teams that can actually execute and grow",
     },
     {
-      name: "Mary Johnson",
+      name: "Program Lead <br/> Thrive Foundation",
       image: img3,
-      text: "I booked a massage for my mum and she loved it! The app made it super simple and efficient.",
+      text: "Mustard HR understands the kind of people we need to drive impact. Their recruitment process is thorough, intentional and aligned with our mission of inclusive economic growth.",
     },
   ];
 
@@ -64,7 +63,10 @@ function Testimonial() {
                 alt={t.name}
                 className="w-14 h-14 rounded-full mb-4 object-cover"
               />
-              <h3 className="font-semibold text-lg text-gray-800">{t.name}</h3>
+              <h3
+                className="font-semibold text-lg text-gray-800"
+                dangerouslySetInnerHTML={{ __html: t.name }}
+              />
               <p className="text-gray-600 mt-2">{t.text}</p>
             </motion.div>
           ))}

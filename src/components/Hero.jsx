@@ -13,23 +13,30 @@ function Hero() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-7xl font-bold leading-tight mb-4">
-            Your <br /> Career, Our <br /> Priority{" "}
+          <h1 className="text-6xl font-bold leading-tight mb-4">
+            Where Great Careers Flourish and Strong Teams Thrive
             <span className="text-[#03B5EC]"></span>
           </h1>
           <p className="text-lg md:text-xl mb-6 opacity-90">
-            We don't just tell you what to do — We <br /> provide real
-            opportunities!
+            We connect employers with the right talent job seekers with the
+            right opporunties, faster, smarter and more human
           </p>
 
-          <motion.button
-            className="bg-[#eab308] hover:bg-[#d4a106] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300"
+          {/* CTA BUTTONS */}
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.5 }}
           >
-            Get Started
-          </motion.button>
+            <button className="bg-[#eab308] hover:bg-[#d4a106] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300">
+              Build Your Dream Career
+            </button>
+
+            <button className="bg-[#eab308] hover:bg-[#d4a106] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300">
+              Grow Your Career
+            </button>
+          </motion.div>
         </motion.div>
 
         {/* RIGHT IMAGE */}

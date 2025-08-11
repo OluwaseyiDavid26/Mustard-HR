@@ -12,6 +12,7 @@ import Mission from "./components/Mission";
 import CoreValues from "./components/CoreValues";
 import OurTeam from "./components/OurTeam";
 import Testimonial from "./components/Testimonial";
+import Scroll from "./components/Scroll";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               <OurTeam />
               <Testimonial />
               <ContactPage />
+              <Scroll />
             </>
           }
         />
