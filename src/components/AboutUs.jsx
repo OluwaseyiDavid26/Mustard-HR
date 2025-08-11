@@ -4,7 +4,7 @@ import aboutImg from "../assets/about-us.jpg";
 
 function AboutUS() {
   return (
-    <section className="bg-[#f8f2e0] py-16 overflow-hidden" id="services">
+    <section className="bg-[#f8f2e0] py-16 overflow-hidden" id="about">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
         {/* Image Animation */}
         <motion.div

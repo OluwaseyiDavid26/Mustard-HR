@@ -28,7 +28,7 @@ function ContactSection() {
   };
 
   return (
-    <section className="bg-white" id="ContactPage">
+    <section className="bg-white" id="contact">
       <div className="w-full h-5 bg-[#FAF3E4]" />
       <div className="py-16 px-6 lg:px-20">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">

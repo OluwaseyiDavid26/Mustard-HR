@@ -29,7 +29,7 @@ function WhatWeDo() {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white" id="services">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-center text-2xl font-semibold text-yellow-500 mb-12">
           What we do

@@ -1,26 +1,24 @@
 import React from "react";
 import missionImg from "../assets/about-us.jpg";
 import visionImg from "../assets/interns.jpg";
+// import extraImg from "../assets/ddd-min.png";
 
 const extraImg = "https://mustardhr.ng/images/ddd-min.png";
 
 const Card = ({ img, title, text }) => (
   <div className="flex flex-col items-center text-center max-w-sm mx-auto relative">
-    {/* Background Shape */}
     <img
       src={extraImg}
       alt="Background shape"
       className="absolute w-[500px] h-[500px] object-contain opacity-30 -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
     />
 
-    {/* Circle Image */}
     <img
       src={img}
       alt={title}
       className="w-44 h-44 rounded-full object-cover relative z-10"
     />
 
-    {/* Title & Text */}
     <h3 className="mt-6 text-2xl font-bold text-gray-800">{title}</h3>
     <p className="mt-2 text-gray-600 leading-relaxed">{text}</p>
   </div>
