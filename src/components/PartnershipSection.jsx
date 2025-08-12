@@ -6,21 +6,26 @@ import property from "../assets/93-property.png";
 import Alles from "../assets/alles-charis.jpeg";
 import thrive from "../assets/thrive.png";
 import gasify from "../assets/gasify-logo.svg";
+import squarefarm from "../assets/squarefarmlogo.png";
+import pristin from "../assets/pristincapitallogo.jpg";
 
 function PartnershipSection() {
   const partners = [
-    { image: Rbd },
     { image: thehive },
-    { image: Anmut },
-    { image: gasify },
     { image: property },
-    { image: Alles },
     { image: thrive },
-    { image: thehive },
+    { image: Rbd },
+    // { image: thehive },
+    { image: Alles },
+    { image: gasify },
+    { image: squarefarm },
+    { image: pristin },
   ];
 
-  // List of logos we want to enlarge
-  const enlargeImages = [Anmut, property, Alles, thrive];
+  // Logos to enlarge
+  const enlargeImages = [property, thrive];
+  // Logos to shrink
+  const shrinkImages = [gasify, squarefarm];
 
   return (
     <section className="py-16 bg-white">
@@ -39,17 +44,25 @@ function PartnershipSection() {
 
         {/* Partner Logos */}
         <div className="grid grid-cols-4 gap-8">
-          {partners.map((partner, index) => (
-            <div key={index} className="flex justify-center items-center">
-              <img
-                src={partner.image}
-                alt={`Partner ${index + 1}`}
-                className={`object-contain ${
-                  enlargeImages.includes(partner.image) ? "h-24" : "h-20"
-                }`}
-              />
-            </div>
-          ))}
+          {partners.map((partner, index) => {
+            let sizeClass = "h-20"; // default size
+
+            if (enlargeImages.includes(partner.image)) {
+              sizeClass = "h-28"; // enlarged
+            } else if (shrinkImages.includes(partner.image)) {
+              sizeClass = "h-16"; // reduced
+            }
+
+            return (
+              <div key={index} className="flex justify-center items-center">
+                <img
+                  src={partner.image}
+                  alt={`Partner ${index + 1}`}
+                  className={`object-contain ${sizeClass}`}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,31 +1,28 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import emailjs from "emailjs-com";
 
 function ContactSection() {
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_e5u8std", // EmailJS service ID
-        "template_s44q82g", // EmailJS template ID
-        form.current,
-        "4Fn-5kF6fUm0txNmA" // EmailJS public key
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          alert("Message sent successfully!");
-          form.current.reset();
-        },
-        (error) => {
-          console.error(error.text);
-          alert("Failed to send message. Please try again.");
-        }
-      );
+    const formData = new FormData(form.current);
+    formData.append("access_key", "9d29657f-655c-4811-b7a3-509ac986f7e7");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      alert("Message sent successfully!");
+      form.current.reset();
+    } else {
+      alert("Failed to send message. Please try again.");
+    }
   };
 
   return (
@@ -64,7 +61,7 @@ function ContactSection() {
                 <label className="block font-medium text-gray-800">Name</label>
                 <input
                   type="text"
-                  name="from_name"
+                  name="name"
                   placeholder="Enter your Name"
                   required
                   className="w-full mt-2 p-3 bg-gray-100 border border-gray-300 rounded-md focus:outline-none text-black placeholder-gray-500"
@@ -76,7 +73,7 @@ function ContactSection() {
                 <label className="block font-medium text-gray-800">Email</label>
                 <input
                   type="email"
-                  name="reply_to"
+                  name="email"
                   placeholder="Enter your email"
                   required
                   className="w-full mt-2 p-3 bg-gray-100 border border-gray-300 rounded-md focus:outline-none text-black placeholder-gray-500"

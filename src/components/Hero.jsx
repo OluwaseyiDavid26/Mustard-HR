@@ -13,10 +13,12 @@ function Hero() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-6xl font-bold leading-tight mb-4">
-            Where Great Careers Flourish and Strong Teams Thrive
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4 max-w-2xl">
+            Where Great Careers Flourish <br className="hidden md:block" />
+            and Strong Teams Thrive
             <span className="text-[#03B5EC]"></span>
           </h1>
+
           <p className="text-lg md:text-xl mb-6 opacity-90">
             We connect employers with the right talent job seekers with the
             right opporunties, faster, smarter and more human
