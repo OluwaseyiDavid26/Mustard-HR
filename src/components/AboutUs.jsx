@@ -33,17 +33,18 @@ function AboutUS() {
             About Us
             <span className="block w-24 h-1 bg-yellow-500 mt-2"></span>
           </h2>
-          <p className="text-gray-800 text-xl leading-relaxed mb-8">
-            At Mustard HR, we believe in growth—for individuals, businesses, and
-            careers. Just like a mustard seed, we nurture potential—helping
-            talents grow into thriving professionals and organizations build
-            strong, high-performing teams. With the right support, small
-            beginnings transform into lasting success. We are not just another
-            HR firm—we are your trusted partners, guiding professionals to the
-            right opportunities and helping businesses find the perfect fit.
-            Whether you are starting out, transitioning, or scaling up, we are
-            here to make the journey smoother. Because when the right people
-            connect, amazing things happen.
+          <h3 className="text-gray-800 text-3xl leading-relaxed mb-8">
+            We’ve seen the challenges from both sides:
+          </h3>
+          <p className=" text-gray-800 text-xl leading-relaxed mb-8 ">
+            Businesses do not just need policies. They need people who thrive.
+            Professionals do not just need jobs. They need guidance, direction,
+            and opportunity. That is where we come in. Whether you are a founder
+            hiring your first team member, a growing company rethinking your
+            structure, or a professional preparing for your next step, we work
+            with you to ensure your people strategy supports your vision. Our
+            approach is simple and intentional. We bring structure where it is
+            needed and provide support that feels clear, practical, and lasting.
           </p>
 
           {/* Button Animation */}

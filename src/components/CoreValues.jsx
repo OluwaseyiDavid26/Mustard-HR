@@ -65,7 +65,7 @@ const CoreValues = () => {
         </motion.p>
 
         {/* Values Grid */}
-        <div className="grid md:grid-cols-6 sm:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 sm:grid-cols-3 gap-8">
           {values.map((value, index) => (
             <motion.div
               key={index}

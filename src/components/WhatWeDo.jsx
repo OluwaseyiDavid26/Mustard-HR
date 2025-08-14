@@ -1,4 +1,5 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 // Images
@@ -22,7 +23,7 @@ function WhatWeDo() {
     },
     {
       image: advisory,
-      title: "HR Advisory",
+      title: "HR Advisory & Support",
       description:
         "We partner with organizations to create the structure, systems, and culture they need to grow responsibly. From compliance to culture building, our guidance is clear, practical, and built for lasting impact.",
     },

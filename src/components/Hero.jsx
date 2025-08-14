@@ -32,7 +32,7 @@ function Hero() {
             transition={{ delay: 0.6, duration: 0.5 }}
           >
             <button className="bg-[#eab308] hover:bg-[#d4a106] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300">
-              Build Your Dream Career
+              Build Your Dream Team
             </button>
 
             <button className="bg-[#eab308] hover:bg-[#d4a106] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300">
