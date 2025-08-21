@@ -19,7 +19,7 @@ function OurTeam() {
       <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-12 items-center">
         {/* Text Section */}
         <motion.div
-          className="order-1 lg:order-2" // Move text first on mobile
+          className="order-1 lg:order-2"
           initial={{ x: 0, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.7 }}
@@ -33,7 +33,7 @@ function OurTeam() {
 
         {/* Team Cards */}
         <motion.div
-          className="order-2 lg:order-1 lg:col-span-2 grid sm:grid-cols-2 gap-8"
+          className="order-2 lg:order-1 lg:col-span-2 grid grid-cols-2 gap-8"
           initial="hidden"
           animate="visible"
           variants={{
