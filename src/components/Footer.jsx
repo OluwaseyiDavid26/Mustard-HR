@@ -72,7 +72,8 @@ const Footer = () => {
 
         {/* Services Section */}
         <div className="text-center md:text-left md:relative md:left-[90px] md:top-[20px]">
-          <h3 className="font-bold text-2xl mb-4">Services</h3>
+          {/* <h3 className="font-bold text-2xl mb-4">Services</h3> */}
+          <h3 className="font-bold text-xl mb-4">Services</h3>
           <ul className="space-y-4 text-gray-300">
             {services.map((service, index) => (
               <li key={index}>{service}</li>
@@ -82,7 +83,7 @@ const Footer = () => {
 
         {/* Contact Us Section */}
         <div className="text-center md:text-left md:relative md:left-[100px]">
-          <h3 className="font-bold mb-4">Contact Us</h3>
+          <h3 className="font-bold  text-xl mb-4">Contact Us</h3>
           <ul className="space-y-4 text-gray-300">
             {contactInfo.map((item, index) => (
               <li

@@ -4,7 +4,10 @@ import heroImg from "../assets/hero-pic.png";
 
 function Hero() {
   return (
-    <section className="w-full bg-[#fee9aa] text-black py-16 overflow-hidden pt-[100px]">
+    <section
+      className="w-full bg-[#fee9aa] text-black py-16 overflow-hidden pt-[100px]"
+      id="hero"
+    >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-6 md:px-12">
         {/* LEFT CONTENT */}
         <motion.div
@@ -31,13 +34,25 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.5 }}
           >
-            <button className="bg-[#eab308] hover:bg-[#d4a106] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300">
-              Build Your Dream Team
-            </button>
+            <div className="flex gap-4">
+              {/* Primary CTA */}
+              <a href="/contact">
+                <button className="bg-[#eab308] hover:bg-[#d4a106] text-white px-6 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 cursor-pointer">
+                  Build Your Dream Team
+                </button>
+              </a>
 
-            <button className="bg-[#eab308] hover:bg-[#d4a106] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300">
-              Grow Your Career
-            </button>
+              {/* Secondary CTA */}
+              <a
+                href="https://forms.gle/CCRf3JfeyyCR4AKS8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="border-2 border-[#eab308] text-[#eab308] px-6 py-3 rounded-lg font-semibold transition-all duration-300 cursor-pointer">
+                  Grow Your Career
+                </button>
+              </a>
+            </div>
           </motion.div>
         </motion.div>
 

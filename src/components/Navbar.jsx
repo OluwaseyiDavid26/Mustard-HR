@@ -25,7 +25,9 @@ export default function Navbar() {
           offset={-70}
           className="flex items-center space-x-3 cursor-pointer"
         >
-          <img src={logo} alt="Mustard HR Logo" className="h-[70px] w-auto" />
+          <a href="hero">
+            <img src={logo} alt="Mustard HR Logo" className="h-[70px] w-auto" />
+          </a>
         </ScrollLink>
 
         {/* Desktop Menu */}

@@ -1,60 +1,43 @@
 import React from "react";
 import { motion } from "framer-motion";
-import missionImg from "../assets/about-us.jpg";
-import visionImg from "../assets/interns.jpg";
+import { FaBullseye, FaEye } from "react-icons/fa";
 
-const extraImg = "https://mustardhr.ng/images/ddd-min.png";
-
-const Card = ({ img, title, text, delay }) => (
+const Card = ({ Icon, title, text, delay }) => (
   <motion.div
-    className="flex flex-col items-center text-center max-w-sm mx-auto"
+    className="flex flex-col items-center text-center max-w-sm mx-auto
+               bg-gradient-to-tr from-white/20 to-white/5 
+               backdrop-blur-xl border border-white/30 
+               p-8 rounded-2xl shadow-lg 
+               transition-all duration-500 ease-out
+               hover:shadow-2xl hover:scale-105 hover:border-[#eab308]/50 relative z-10"
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, delay }}
     viewport={{ once: true, amount: 0.3 }}
   >
-    {/* Image wrapper */}
-    <div className="relative w-44 h-44 flex items-center justify-center">
-      {/* Extra background image fixed behind */}
-      <motion.img
-        src={extraImg}
-        alt="Background shape"
-        className="absolute inset-0 w-full h-full object-contain opacity-30 -z-10"
-        initial={{ scale: 0.8, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 0.3 }}
-        transition={{ duration: 0.8, delay: delay + 0.2 }}
-        viewport={{ once: true }}
-      />
-
-      {/* Main circular image */}
-      <motion.img
-        src={img}
-        alt={title}
-        className="w-44 h-44 rounded-full object-cover z-10 shadow-lg"
-        initial={{ scale: 0.8, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.6, delay: delay + 0.4 }}
-        viewport={{ once: true }}
-      />
+    <div
+      className="w-20 h-20 flex items-center justify-center 
+                 rounded-full bg-gradient-to-r from-[#eab308] to-[#d4a106] 
+                 shadow-md mb-6 transition-transform duration-500 hover:scale-110"
+    >
+      <Icon className="text-white text-3xl" />
     </div>
 
-    {/* Title */}
     <motion.h3
-      className="mt-6 text-2xl font-bold text-gray-800"
+      className="text-2xl font-bold text-gray-800 mb-3"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: delay + 0.6 }}
+      transition={{ duration: 0.6, delay: delay + 0.2 }}
       viewport={{ once: true }}
     >
       {title}
     </motion.h3>
 
-    {/* Description */}
     <motion.p
-      className="mt-2 text-gray-600 leading-relaxed"
+      className="text-gray-600 leading-relaxed"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: delay + 0.8 }}
+      transition={{ duration: 0.6, delay: delay + 0.4 }}
       viewport={{ once: true }}
     >
       {text}
@@ -63,16 +46,24 @@ const Card = ({ img, title, text, delay }) => (
 );
 
 const Mission = () => (
-  <section className="py-16 bg-white">
-    <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+  <section className="relative py-20 overflow-hidden">
+    {/* Star background */}
+    <div className="absolute inset-0 bg-gradient-to-b from-[#fef9e7] via-[#fff] to-[#fef9e7]">
+      <div className="stars"></div>
+      <div className="stars2"></div>
+      <div className="stars3"></div>
+    </div>
+
+    {/* Content */}
+    <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
       <Card
-        img={missionImg}
+        Icon={FaBullseye}
         title="Our Mission"
         text="To empower individuals and businesses with tailored HR solutions that foster career growth, workplace excellence, and long-term success."
         delay={0}
       />
       <Card
-        img={visionImg}
+        Icon={FaEye}
         title="Our Vision"
         text="To be the go-to HR partner for professionals and businesses, nurturing careers, strengthening organizations, and shaping a future where talent thrives."
         delay={0.3}

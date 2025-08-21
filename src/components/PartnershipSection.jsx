@@ -3,7 +3,7 @@ import Rbd from "../assets/Rbd.jpeg";
 import thehive from "../assets/thehive.png";
 import Anmut from "../assets/Anmut-removebg.png";
 import property from "../assets/93-property.png";
-import Alles from "../assets/alles-charis.jpeg";
+import Alles from "../assets/green n black (1).png";
 import thrive from "../assets/thrive.png";
 import gasify from "../assets/gasify-logo.svg";
 import squarefarm from "../assets/squarefarmlogo.png";

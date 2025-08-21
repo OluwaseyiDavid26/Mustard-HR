@@ -7,38 +7,41 @@ import img3 from "../assets/img3.png";
 function Testimonial() {
   const testimonials = [
     {
-      name: "Business Manager <br/> Gasify",
+      name: "Osayande Osarumen",
+      title: "Business Manager, Gasify",
       image: img1,
-      text: "Mustard HR helped us scale our operation with the right people. Their understanding of our industry and the quality of candidates they brought in saved us weeks of recruitment time and ensured we could focus on growing Gasify",
+      text: "Mustard HR helped us scale our operation with the right people. Their understanding of our industry and the quality of candidates they brought in saved us weeks of recruitment time and ensured we could focus on growing Gasify.",
     },
     {
-      name: "Program Manager <br/> The Hive Incubator",
+      name: "Oyindamola Fasuyi",
+      title: "Program Manager, The Hive Incubator",
       image: img2,
-      text: "Working with Mustard HR has been a game changer for our startups. They do more than just find candidates, they help us build teams that can actually execute and grow",
+      text: "Working with Mustard HR has been a game changer for our startups. They do more than just find candidates, they help us build teams that can actually execute and grow.",
     },
     {
-      name: "Program Lead <br/> Thrive Foundation",
+      name: "Durotimi Fayemiwo",
+      title: "Programs Lead, Thrive Foundation",
       image: img3,
       text: "Mustard HR understands the kind of people we need to drive impact. Their recruitment process is thorough, intentional and aligned with our mission of inclusive economic growth.",
     },
   ];
 
   return (
-    <section className="bg-[#fee9aa] py-16 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4">
+    <section className="bg-gradient-to-b from-[#fff8e1] to-[#fee9aa] py-20 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
         <motion.h2
-          className="text-3xl font-bold text-center text-gray-800 mb-12"
+          className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-16"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Testimonial
+          Testimonials
         </motion.h2>
 
         {/* Testimonials Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-10"
           initial="hidden"
           animate="visible"
           variants={{
@@ -51,23 +54,28 @@ function Testimonial() {
           {testimonials.map((t, index) => (
             <motion.div
               key={index}
-              className="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center text-center"
+              className="bg-white/70 backdrop-blur-md p-8 rounded-2xl shadow-lg flex flex-col items-center text-center 
+                         transition-transform transform hover:scale-105 hover:shadow-2xl"
               variants={{
                 hidden: { opacity: 0, y: 40 },
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.6 }}
             >
+              {/* Image */}
               <img
                 src={t.image}
                 alt={t.name}
-                className="w-14 h-14 rounded-full mb-4 object-cover"
+                className="w-16 h-16 rounded-full mb-4 object-cover border-2 border-[#d4a106]"
               />
-              <h3
-                className="font-semibold text-lg text-gray-800"
-                dangerouslySetInnerHTML={{ __html: t.name }}
-              />
-              <p className="text-gray-600 mt-2">{t.text}</p>
+
+              {/* Name */}
+              <h3 className="font-semibold text-lg text-gray-900">{t.name}</h3>
+              {/* Title */}
+              <p className="text-sm text-gray-500 mb-4">{t.title}</p>
+
+              {/* Testimonial Text */}
+              <p className="text-gray-700 leading-relaxed italic">“{t.text}”</p>
             </motion.div>
           ))}
         </motion.div>

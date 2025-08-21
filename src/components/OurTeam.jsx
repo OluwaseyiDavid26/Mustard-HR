@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import folajomi from "../assets/folajomi.jpg";
-import tarekayi from "../assets/tarekeyi.jpg";
+import folajomi from "../assets/steve.jpg";
+import tarekayi from "../assets/tare.jpg";
 import chiamaka from "../assets/chiamaka.jpg";
 import balikis from "../assets/balikis.jpg";
 
