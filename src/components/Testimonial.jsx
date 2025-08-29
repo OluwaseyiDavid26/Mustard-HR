@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import img1 from "../assets/duro.jpg";
-import img2 from "../assets/3.svg";
+import img2 from "../assets/2.svg";
 import img3 from "../assets/duro.jpg";
 
 function Testimonial() {
@@ -14,7 +14,7 @@ function Testimonial() {
     },
     {
       name: "Oyindamola Fasuyi",
-      title: "Program Manager, The Hive Incubator",
+      title: "Administrative Manager, The Hive Incubator",
       image: img2,
       text: "Working with Mustard HR has been a game changer for our startups. They do more than just find candidates, they help us build teams that can actually execute and grow.",
     },

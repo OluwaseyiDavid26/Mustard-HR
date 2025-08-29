@@ -7,10 +7,10 @@ import chiamaka from "../assets/chiamaka.jpg";
 import balikis from "../assets/balikis.jpg";
 
 const teamMembers = [
-  { name: "Folajomi A", role: "CEO", image: folajomi },
   { name: "Tarekayi O", role: "HRBP", image: tarekayi },
-  { name: "Chiamaka V", role: "", image: chiamaka },
-  { name: "Balikis L", role: "", image: balikis },
+  { name: "Chiamaka V", role: "HR Manager", image: chiamaka },
+  { name: "Balikis L", role: "HR Manager", image: balikis },
+  { name: "Stephen Danjuma", role: "Team Lead", image: folajomi },
 ];
 
 function OurTeam() {
