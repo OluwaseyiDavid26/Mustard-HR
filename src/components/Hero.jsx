@@ -3,6 +3,12 @@ import { motion } from "framer-motion";
 import heroImg from "../assets/hero-pic.png";
 
 function Hero() {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section
       className="w-full bg-[#fee9aa] text-black py-16 overflow-hidden pt-[100px]"
@@ -23,8 +29,10 @@ function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl mb-6 opacity-90">
-            We connect employers with the right talent job seekers with the
-            right opporunties, faster, smarter and more human
+            {/* We connect employers with the right talent job seekers with the
+            right opporunties, faster, smarter and more human */}
+            We connect employers with the right talent, job seekers with the
+            right opportunities. Faster , smarter and more human
           </p>
 
           {/* CTA BUTTONS */}
@@ -36,11 +44,17 @@ function Hero() {
           >
             <div className="flex gap-4">
               {/* Primary CTA */}
-              <a href="/contact">
+              <button
+                onClick={scrollToContact}
+                className="bg-[#eab308] hover:bg-[#d4a106] text-white px-6 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 cursor-pointer"
+              >
+                Build Your Dream Team
+              </button>
+              {/* <a href="/contact">
                 <button className="bg-[#eab308] hover:bg-[#d4a106] text-white px-6 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 cursor-pointer">
                   Build Your Dream Team
                 </button>
-              </a>
+              </a> */}
 
               {/* Secondary CTA */}
               <a
