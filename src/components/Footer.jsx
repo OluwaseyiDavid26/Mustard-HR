@@ -1,11 +1,10 @@
+// ...existing code...
 import React from "react";
-
 import musthardLogo from "../assets/MustardHRwhite-09.png";
 import facebookIcon from "../assets/icons8-facebook-logo-50.png";
 import instagramIcon from "../assets/icons8-instagram-logo-50.png";
 import linkedinIcon from "../assets/icons8-linkedin-50.png";
 import twitterIcon from "../assets/icons8-twitter-bird-50.png";
-
 import musthardFooter from "../assets/musthardFooter.png";
 import mailImage from "../assets/mail-img.png";
 import phoneImage from "../assets/phone-img.png";
@@ -15,7 +14,7 @@ const services = ["Talent Acquisition", "Career Development", "HR Advisory"];
 const contactInfo = [
   {
     icon: musthardFooter,
-    text: "Shoprite Mall Cnr, Igbatoro Road, Akure 340001",
+    text: "The Redeemed Business District (RBD) Igbatoro Road, Akure 340283, Ondo state.",
   },
   {
     icon: mailImage,
@@ -55,80 +54,93 @@ const socialLinks = [
 const Footer = () => {
   return (
     <footer className="bg-black text-white w-full">
-      {/* Top Grid */}
-      <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 py-12 px-6 md:px-20">
-        {/* About Section */}
-        <div className="text-center md:text-left">
-          <img
-            src={musthardLogo}
-            alt="Mustard HR Logo"
-            className="h-[150px] mb-4 md:relative md:left-[-72px] mx-auto md:mx-0"
-          />
-          <p className="text-gray-300 max-w-xs mx-auto md:mx-0">
-            Welcome to Mustard HR. We are more than just a service provider —
-            we’re your partner in building people and growing businesses.
-          </p>
-        </div>
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16 md:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 md:gap-16">
+          <div className="lg:col-span-5">
+            <img
+              src={musthardLogo}
+              alt="Mustard HR Logo"
+              className="h-24 md:h-28 mb-8"
+            />
+            <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-sm">
+              Welcome to Mustard HR. We are more than just a service provider —
+              we're your partner in building people and growing businesses.
+            </p>
+          </div>
 
-        {/* Services Section */}
-        <div className="text-center md:text-left md:relative md:left-[90px] md:top-[20px]">
-          {/* <h3 className="font-bold text-2xl mb-4">Services</h3> */}
-          <h3 className="font-bold text-xl mb-4">Services</h3>
-          <ul className="space-y-4 text-gray-300">
-            {services.map((service, index) => (
-              <li key={index}>{service}</li>
-            ))}
-          </ul>
-        </div>
+          <div className="lg:col-span-3">
+            <h3 className="font-bold text-xl md:text-2xl mb-6 text-yellow-500">
+              Services
+            </h3>
+            <ul className="space-y-4">
+              {services.map((service, index) => (
+                <li
+                  key={index}
+                  className="text-gray-300 text-base md:text-lg hover:text-yellow-500 transition-colors cursor-pointer"
+                >
+                  {service}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Contact Us Section */}
-        <div className="text-center md:text-left md:relative md:left-[100px]">
-          <h3 className="font-bold  text-xl mb-4">Contact Us</h3>
-          <ul className="space-y-4 text-gray-300">
-            {contactInfo.map((item, index) => (
-              <li
-                key={index}
-                className="flex flex-col md:flex-row items-center md:items-start gap-3"
-              >
-                <img src={item.icon} alt="" className="w-6 h-6" />
-                {item.link ? (
-                  <a href={item.link} className="hover:underline">
-                    {item.text}
-                  </a>
-                ) : (
-                  <span>{item.text}</span>
-                )}
-              </li>
-            ))}
-          </ul>
+          <div className="lg:col-span-4">
+            <h3 className="font-bold text-xl md:text-2xl mb-6 text-yellow-500">
+              Contact Us
+            </h3>
+            <ul className="space-y-5">
+              {contactInfo.map((item, index) => (
+                <li key={index} className="flex items-start gap-4">
+                  <img
+                    src={item.icon}
+                    alt=""
+                    className="w-6 h-6 mt-1 flex-shrink-0"
+                  />
+                  {item.link ? (
+                    <a
+                      href={item.link}
+                      className="text-gray-300 text-base md:text-lg hover:text-yellow-500 transition-colors"
+                    >
+                      {item.text}
+                    </a>
+                  ) : (
+                    <span className="text-gray-300 text-base md:text-lg leading-relaxed">
+                      {item.text}
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
 
-          {/* Social Icons */}
-          <div className="flex justify-center md:justify-start space-x-4 mt-6">
-            {socialLinks.map((item, index) => (
-              <a
-                key={index}
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex justify-center items-center w-10 h-10 rounded-full"
-                style={{ backgroundColor: "#eab308" }}
-              >
-                <img src={item.icon} alt={item.alt} className="w-6 h-6" />
-              </a>
-            ))}
+            <div className="flex gap-4 mt-8">
+              {socialLinks.map((item, index) => (
+                <a
+                  key={index}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex justify-center items-center w-12 h-12 rounded-full bg-yellow-500 hover:bg-yellow-600 transition-colors duration-300 hover:scale-110"
+                  aria-label={item.alt}
+                >
+                  <img src={item.icon} alt={item.alt} className="w-6 h-6" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Divider */}
-      <div className="border-t border-gray-800"></div>
-
-      {/* Copyright */}
-      <div className="py-6 text-center text-gray-400 text-sm">
-        Copyright © {new Date().getFullYear()} Mustard HR.
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-6">
+          <p className="text-center text-gray-400 text-sm md:text-base">
+            Copyright © {new Date().getFullYear()} Mustard HR. All rights
+            reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );
 };
 
 export default Footer;
+// ...existing code...

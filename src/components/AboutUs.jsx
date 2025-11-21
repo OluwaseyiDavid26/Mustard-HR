@@ -34,7 +34,7 @@ function AboutUS() {
             <span className="block w-24 h-1 bg-yellow-500 mt-2"></span>
           </h2>
           <h3 className="text-gray-800 text-3xl leading-relaxed mb-8">
-            We’ve seen the challenges from both sides:
+            We have seen the challenges from both sides:
           </h3>
           <p className=" text-gray-800 text-xl leading-relaxed mb-8 ">
             Businesses do not just need policies. They need people who thrive.

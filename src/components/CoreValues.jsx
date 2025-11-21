@@ -33,15 +33,10 @@ const CoreValues = () => {
       text: "We believe everyone has the capacity to learn, evolve, and lead — and we are here to support that journey.",
       img: growthImg,
     },
-    {
-      title: "Ownership",
-      text: " We take responsibility for our actions, our results, and the trust our clients place in us, ensuring every commitment is followed through.",
-      img: communityImg, // Change if you have a specific image
-    },
   ];
 
   return (
-    <section className="py-16" style={{ backgroundColor: "#fee9aa" }}>
+    <section className="py-16 bg-[#fee9aa]">
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Section Title */}
         <motion.h2
@@ -55,7 +50,7 @@ const CoreValues = () => {
         </motion.h2>
 
         <motion.p
-          className="text-gray-700 max-w-2xl mx-auto mb-12"
+          className="text-gray-700 text-base md:text-lg max-w-2xl mx-auto mb-12"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -65,15 +60,15 @@ const CoreValues = () => {
         </motion.p>
 
         {/* Values Grid */}
-        <div className="grid md:grid-cols-3 sm:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
           {values.map((value, index) => (
             <motion.div
               key={index}
-              className="bg-[#f9f3e2] p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+              className="bg-[#f9f3e2] p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
             >
               <motion.img
                 src={value.img}
@@ -82,12 +77,14 @@ const CoreValues = () => {
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
+                transition={{ duration: 0.5, delay: index * 0.15 + 0.2 }}
               />
               <h3 className="text-xl text-black font-semibold mb-2">
                 {value.title}
               </h3>
-              <p className="text-gray-600">{value.text}</p>
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                {value.text}
+              </p>
             </motion.div>
           ))}
         </div>

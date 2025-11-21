@@ -92,12 +92,12 @@ const teamMembers = [
   },
   {
     name: "Chiamaka V",
-    role: "HR Manager",
+    role: "Team Lead",
     image: chiamaka,
   },
   {
     name: "Balikis L",
-    role: "HR Manager",
+    role: "Team Lead",
     image: balikis,
   },
 ];

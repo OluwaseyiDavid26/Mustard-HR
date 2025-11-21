@@ -9,12 +9,13 @@ function Hero() {
       contactSection.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
     <section
       className="w-full bg-[#fee9aa] text-black py-16 overflow-hidden pt-[100px]"
       id="hero"
     >
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-6 md:px-12">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-6 md:px-12 gap-8 md:gap-12">
         {/* LEFT CONTENT */}
         <motion.div
           className="flex-1 text-center md:text-left"
@@ -22,18 +23,30 @@ function Hero() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4 max-w-2xl">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 max-w-2xl">
             Where Great Careers Flourish <br className="hidden md:block" />
             and Strong Teams Thrive
-            <span className="text-[#03B5EC]"></span>
           </h1>
 
-          <p className="text-lg md:text-xl mb-6 opacity-90">
-            {/* We connect employers with the right talent job seekers with the
-            right opporunties, faster, smarter and more human */}
+          <p className="text-base sm:text-lg md:text-xl mb-6 opacity-90 max-w-xl mx-auto md:mx-0">
             We connect employers with the right talent, job seekers with the
-            right opportunities. Faster , smarter and more human
+            right opportunities. <br />
+            Faster , smarter and more human
           </p>
+
+          {/* IMAGE - Mobile only (below text, above buttons) */}
+          <motion.div
+            className="md:hidden mb-8 flex justify-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+            <img
+              src={heroImg}
+              alt="Musthard HR Illustration"
+              className="w-full max-w-sm h-auto object-contain"
+            />
+          </motion.div>
 
           {/* CTA BUTTONS */}
           <motion.div
@@ -42,37 +55,31 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.5 }}
           >
-            <div className="flex gap-4">
-              {/* Primary CTA */}
-              <button
-                onClick={scrollToContact}
-                className="bg-[#eab308] hover:bg-[#d4a106] text-white px-6 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 cursor-pointer"
-              >
-                Build Your Dream Team
-              </button>
-              {/* <a href="/contact">
-                <button className="bg-[#eab308] hover:bg-[#d4a106] text-white px-6 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 cursor-pointer">
-                  Build Your Dream Team
-                </button>
-              </a> */}
+            {/* Primary CTA */}
+            <button
+              onClick={scrollToContact}
+              className="bg-[#eab308] hover:bg-[#d4a106] text-white px-6 py-3.5 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer active:scale-95"
+            >
+              Build Your Dream Team
+            </button>
 
-              {/* Secondary CTA */}
-              <a
-                href="https://forms.gle/CCRf3JfeyyCR4AKS8"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="border-2 border-[#eab308] text-[#eab308] px-6 py-3 rounded-lg font-semibold transition-all duration-300 cursor-pointer">
-                  Grow Your Career
-                </button>
-              </a>
-            </div>
+            {/* Secondary CTA */}
+            <a
+              href="https://forms.gle/3yjCgrd9DfefR1Zw8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <button className="w-full border-2 border-[#eab308] text-[#eab308] hover:bg-[#eab308] hover:text-white px-6 py-3.5 rounded-lg font-semibold transition-all duration-300 cursor-pointer active:scale-95">
+                Grow Your Career
+              </button>
+            </a>
           </motion.div>
         </motion.div>
 
-        {/* RIGHT IMAGE */}
+        {/* RIGHT IMAGE - Desktop only */}
         <motion.div
-          className="flex-1 mt-10 md:mt-0 flex justify-center"
+          className="hidden md:flex flex-1 justify-center items-center"
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -80,7 +87,7 @@ function Hero() {
           <img
             src={heroImg}
             alt="Musthard HR Illustration"
-            className="w-full h-auto object-contain relative top-[20px]"
+            className="w-full h-auto object-contain"
           />
         </motion.div>
       </div>
