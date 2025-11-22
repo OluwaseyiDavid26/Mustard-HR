@@ -56,16 +56,16 @@ function Hero() {
             transition={{ delay: 0.6, duration: 0.5 }}
           >
             {/* Primary CTA */}
-            <button
-              onClick={scrollToContact}
+            <a
+              href="https://forms.gle/3yjCgrd9DfefR1Zw8"
               className="bg-[#eab308] hover:bg-[#d4a106] text-white px-6 py-3.5 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer active:scale-95"
             >
               Build Your Dream Team
-            </button>
+            </a>
 
             {/* Secondary CTA */}
-            <a
-              href="https://forms.gle/3yjCgrd9DfefR1Zw8"
+            <button
+              onClick={scrollToContact}
               target="_blank"
               rel="noopener noreferrer"
               className="block"
@@ -73,7 +73,7 @@ function Hero() {
               <button className="w-full border-2 border-[#eab308] text-[#eab308] hover:bg-[#eab308] hover:text-white px-6 py-3.5 rounded-lg font-semibold transition-all duration-300 cursor-pointer active:scale-95">
                 Grow Your Career
               </button>
-            </a>
+            </button>
           </motion.div>
         </motion.div>
 

@@ -86,7 +86,7 @@ import balikis from "../assets/balikis.jpg";
 
 const teamMembers = [
   {
-    name: "Tarekayi O",
+    name: "Tarekeyi O",
     role: "Talent and Business Strategy Partner",
     image: tarekayi,
   },
